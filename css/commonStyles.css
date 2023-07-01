@@ -1,0 +1,13 @@
+footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #b9b9b9;
+  padding: 20px 0;
+}
+
+.subtitle {
+  margin-top: 10px;
+}
+ 
