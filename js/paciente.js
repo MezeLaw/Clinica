@@ -4,7 +4,7 @@ window.onload = function() {
     var user = params.get('user');
  
     var saludoPaciente = document.getElementById('saludo-paciente')
-   
+    localStorage.setItem('userLogged', user);
     saludoPaciente.textContent = 'Hola, ' + user + '!';
   };
 
