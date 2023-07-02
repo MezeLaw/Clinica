@@ -4,11 +4,11 @@ window.onload = function() {
     var user = params.get('user');
     var userLocalStorage = localStorage.getItem('userLogged');
 
-    if (user) {
+    if (user && user === "mirtita") {
       var saludoPaciente = document.getElementById('saludo-paciente')
       localStorage.setItem('userLogged', user);
       saludoPaciente.textContent = 'Hola, ' + user + '!';
-    } else if (userLocalStorage) {
+    } else if (userLocalStorage && userLocalStorage === "mirtita") {
       var saludoPaciente = document.getElementById('saludo-paciente')
       localStorage.setItem('userLogged', userLocalStorage);
       saludoPaciente.textContent = 'Hola, ' + userLocalStorage + '!';
