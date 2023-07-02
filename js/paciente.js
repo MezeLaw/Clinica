@@ -15,6 +15,8 @@ window.onload = function() {
     } else {
       window.location.href = "./login.html"
     }
+
+    document.querySelector('body').classList.add('visible');
   };
 
 

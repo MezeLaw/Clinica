@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("loginForm").addEventListener("submit", function(event) {
       event.preventDefault();  
-    
+      
       var username = document.getElementById("username").value;
       var password = document.getElementById("password").value;
      
@@ -13,6 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = "doctor.html?user=" + encodeURIComponent(username);
       } else {
         alert("Usuario incorrecto");
-      }
+      } 
     });
   });

@@ -22,4 +22,6 @@ window.onload = function() {
     } else {
         perfil.style.display = 'none'
     } 
+
+    document.querySelector('body').classList.add('visible');
   };
