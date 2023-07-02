@@ -61,97 +61,126 @@
           </div>      
         </div>
         <hr> 
+ 
+          <!-- Turnos a trabajar-->
 
-        <div class="container">
-            <div id="turno-cancelado"></div>
-            <h6>Tabla de Turnos</h6>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Fecha</th>
-                  <th>Hora</th>
-                  <th>Especialidad</th>
-                  <th>Médico</th>
-                  <th>Observaciones</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>01/07/2023</td>
-                  <td>10:00 AM</td>
-                  <td>Cardiología</td>
-                  <td>Dr. Pérez</td>
-                  <td>Consulta</td>
-                  <td><button class="btn btn-danger" onclick="cancelarTurno()">Cancelar</button></td>
-                </tr>
-                <tr>
-                  <td>02/07/2023</td>
-                  <td>11:30 AM</td>
-                  <td>Cardiología</td>
-                  <td>Dr. Gómez</td>
-                  <td>Ergometria</td>
-                  <td><button class="btn btn-danger" onclick="cancelarTurno()">Cancelar</button></td>
-                </tr>
-                <tr>
-                  <td>03/07/2023</td>
-                  <td>09:00 AM</td>
-                  <td>Psicología</td>
-                  <td>Dra. Sánchez</td>
-                  <td>Sesión</td>
-                  <td><button class="btn btn-danger" onclick="cancelarTurno()">Cancelar</button></td>
-                </tr>
-                <tr>
-                  <td>04/07/2023</td>
-                  <td>02:00 PM</td>
-                  <td>Laboratorio</td>
-                  <td>Dr. Rodríguez</td>
-                  <td>Análisis completo</td>
-                  <td><button class="btn btn-danger" onclick="cancelarTurno()">Cancelar</button></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="container">
+            <h4>Turnos de la semana</h4>
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="card mb-3">
+                  <div class="card-header bg-primary text-white">
+                    Lunes
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong>10:00 AM</strong> - Cardiología gral
+                      <br>
+                      Paciente: Juan Dubi
+                      <br>
+                      Observaciones: Consulta regular
+                    </li>
+                    <li class="list-group-item">
+                      <strong>11:30 AM</strong> - Ergometria
+                      <br>
+                      Paciente: María Gómez
+                      <br>
+                      Observaciones: Requerido por control
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="card mb-3">
+                  <div class="card-header bg-success text-white">
+                    Martes
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong>09:00 AM</strong> - Electrocardiograma
+                      <br>
+                      Paciente: Laura Sánchez
+                      <br>
+                      Observaciones: -
+                    </li>
+                    <li class="list-group-item">
+                      <strong>02:00 PM</strong> - Holter
+                      <br>
+                      Paciente: Andrés Rodríguez
+                      <br>
+                      Observaciones: requerido por empleador
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="card mb-3">
+                  <div class="card-header bg-info text-white">
+                    Miércoles
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong>10:30 AM</strong> - Cardiología gral
+                      <br>
+                      Paciente: Roberto Mendoza
+                      <br>
+                      Observaciones: Control de presión arterial
+                    </li> 
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="card mb-3">
+                  <div class="card-header bg-warning text-white">
+                    Jueves
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong>09:30 AM</strong> - Cirugía
+                      <br>
+                      Paciente: Pablo Hernández
+                      <br>
+                      Observaciones: Instalacion marcapasos
+                    </li>
+                    <li class="list-group-item">
+                      <strong>11:00 AM</strong> - Cardiologia gral
+                      <br>
+                      Paciente: Pablo Hernández
+                      <br>
+                      Observaciones: Control marcapasos
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="card mb-3">
+                  <div class="card-header bg-danger text-white">
+                    Viernes
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong>02:30 PM</strong> - Psicología
+                      <br>
+                      Paciente: Marta Fernández
+                      <br>
+                      Observaciones: Sesión terapéutica post - operacion
+                    </li>
+                    <li class="list-group-item">
+                      <strong>04:00 PM</strong> - Exposicion Cardiologia actual
+                      <br>
+                      Paciente: Generico
+                      <br>
+                      Observaciones: Espacio para todos los profesionales del sanatorio
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
           
-          <div class="container">
-            <h4>Solicitar turno</h4> 
-            <form id="formulario">
-              <div class="form-group">
-                <label for="especialidad">Especialidad:</label>
-                <select class="form-control" id="especialidad" required>
-                  <option value="">Seleccionar especialidad</option>
-                  <option value="cardiologia">Cardiología</option>
-                  <option value="laboratorio">Laboratorio</option> 
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="medico">Médico:</label>
-                <select class="form-control" id="medico" required>
-                  <option value="">Seleccionar médico</option>
-                  <option value="perez">Dr. Pérez</option>
-                  <option value="gomez">Dr. Gómez</option> 
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="fecha">Fecha:</label>
-                <input type="date" class="form-control" id="fecha" required>
-              </div>
-              <div class="form-group">
-                <label for="hora">Hora:</label>
-                <input type="time" class="form-control" id="hora" required>
-              </div>
-              <div class="form-group">
-                <label for="email">Email del paciente:</label>
-                <input type="email" class="form-control" id="email" required>
-              </div>
-              <div class="form-group">
-                <label for="observaciones">Observaciones:</label>
-                <textarea class="form-control" id="observaciones" rows="3"></textarea>
-              </div>
-              <button type="button" class="btn btn-primary mb-4" onclick="sacarTurno()">Reservar turno</button>
-            </form>
-            <div id="mensaje"></div>
-          </div> 
+          
+          <!-- Turnos a trabajar-->
+
         </div>
 
     </div> 
