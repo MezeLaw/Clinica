@@ -2,10 +2,19 @@ window.onload = function() {
     var url = new URL(window.location.href);
     var params = new URLSearchParams(url.search);
     var user = params.get('user');
- 
-    var saludoPaciente = document.getElementById('saludo-paciente')
-    localStorage.setItem('userLogged', user);
-    saludoPaciente.textContent = 'Hola, ' + user + '!';
+    var userLocalStorage = localStorage.getItem('userLogged');
+
+    if (user) {
+      var saludoPaciente = document.getElementById('saludo-paciente')
+      localStorage.setItem('userLogged', user);
+      saludoPaciente.textContent = 'Hola, ' + user + '!';
+    } else if (userLocalStorage) {
+      var saludoPaciente = document.getElementById('saludo-paciente')
+      localStorage.setItem('userLogged', userLocalStorage);
+      saludoPaciente.textContent = 'Hola, ' + userLocalStorage + '!';
+    } else {
+      window.location.href = "./login.html"
+    }
   };
 
 
