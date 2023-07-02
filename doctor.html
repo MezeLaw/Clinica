@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Sanatorio Medico Argentino</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+  <script src="./js/doctor.js"></script>
+  <script src="./js/custom.js"></script>
+  <link rel="stylesheet" href="css/commonStyles.css">
+</head>
+<body class="fade-in">
+
+  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="./index.html">
+            <img src="./img/logo.png" alt="Sanatorio Medico Argentino Logo" height="30">
+          </a>
+        <a class="navbar-brand" href="./index.html">Sanatorio Medico Argentino</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Inicio</a>
+            </li>  
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="perfil">Mi perfil</a>
+              </li>
+          </ul>
+          <button class="btn btn-danger ml-lg-2" id="log-out-btn" onclick="logOutFromProfile()">Cerrar sesion</button>
+        </div>
+      </nav>
+        
+    <div class="container mt-4">
+        <div class="row">
+          <div class="col-md-12"> 
+            <h1 id="saludo-doctor"></h1>     
+          </div> 
+        </div>
+        <hr>
+          
+
+        <div class="row">
+          <div class="col-md-12">
+            <h4>Mis datos</h4>
+            <h6>Apellido: House</h6>
+            <h6>Nombre: Gregory</h6>
+            <h6>Edad: 53</h6>
+          </div>      
+        </div>
+        <hr> 
+ 
+          <!-- Turnos a trabajar-->
+
+          <div class="container">
+            <h4>Turnos de la semana</h4>
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="card mb-3">
+                  <div class="card-header bg-primary text-white">
+                    Lunes
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong>10:00 AM</strong> - Cardiología gral
+                      <br>
+                      Paciente: Juan Dubi
+                      <br>
+                      Observaciones: Consulta regular
+                    </li>
+                    <li class="list-group-item">
+                      <strong>11:30 AM</strong> - Ergometria
+                      <br>
+                      Paciente: María Gómez
+                      <br>
+                      Observaciones: Requerido por control
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="card mb-3">
+                  <div class="card-header bg-success text-white">
+                    Martes
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong>09:00 AM</strong> - Electrocardiograma
+                      <br>
+                      Paciente: Laura Sánchez
+                      <br>
+                      Observaciones: -
+                    </li>
+                    <li class="list-group-item">
+                      <strong>02:00 PM</strong> - Holter
+                      <br>
+                      Paciente: Andrés Rodríguez
+                      <br>
+                      Observaciones: requerido por empleador
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="card mb-3">
+                  <div class="card-header bg-info text-white">
+                    Miércoles
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong>10:30 AM</strong> - Cardiología gral
+                      <br>
+                      Paciente: Roberto Mendoza
+                      <br>
+                      Observaciones: Control de presión arterial
+                    </li> 
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="card mb-3">
+                  <div class="card-header bg-warning text-white">
+                    Jueves
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong>09:30 AM</strong> - Cirugía
+                      <br>
+                      Paciente: Pablo Hernández
+                      <br>
+                      Observaciones: Instalacion marcapasos
+                    </li>
+                    <li class="list-group-item">
+                      <strong>11:00 AM</strong> - Cardiologia gral
+                      <br>
+                      Paciente: Pablo Hernández
+                      <br>
+                      Observaciones: Control marcapasos
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="card mb-3">
+                  <div class="card-header bg-danger text-white">
+                    Viernes
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <strong>02:30 PM</strong> - Psicología
+                      <br>
+                      Paciente: Marta Fernández
+                      <br>
+                      Observaciones: Sesión terapéutica post - operacion
+                    </li>
+                    <li class="list-group-item">
+                      <strong>04:00 PM</strong> - Exposicion Cardiologia actual
+                      <br>
+                      Paciente: Generico
+                      <br>
+                      Observaciones: Espacio para todos los profesionales del sanatorio
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          <!-- Turnos a trabajar-->
+
+        </div>
+
+    </div> 
+       
+  <!-- Footer --> 
+<footer class="footer mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="./img/logo.png" alt="Logo de la clínica" width="50" height="50">
+        </div>
+        <div class="col-md-9">
+          <div class="row">
+            <div class="col-md-3">
+              <h5>Secciones</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h5>Enlaces</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Acerca de nosotros</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>Contacto</h5>
+              <address>
+                Dirección de la clínica<br>
+                Ciudad, País<br>
+                Teléfono: +123456789<br>
+                Email: info@sma.com
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer> 
+</body>
+</html>
