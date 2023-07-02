@@ -1,7 +1,4 @@
-
-  
-
-  function logOut(){
+function logOut(){
 
     localStorage.clear()
     var loginBtn = document.getElementById('login-btn');
@@ -13,9 +10,9 @@
     perfil.style.display = 'none'
 
     window.location.href = "./index.html"
-  }
+}
 
-  function logOutFromProfile(){
+function logOutFromProfile(){
 
     localStorage.clear()
     var loginBtn = document.getElementById('login-btn');
@@ -26,4 +23,4 @@
     perfil.style.display = 'none'
 
     window.location.href = "./index.html"
-  }
+}
