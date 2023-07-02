@@ -4,14 +4,14 @@ window.onload = function() {
     var user = params.get('user');
     var userLocalStorage = localStorage.getItem('userLogged');
 
-    if (user && user === "house") {
-      var saludoDoctor = document.getElementById('saludo-doctor')
-      localStorage.setItem('userLogged', user);
-      saludoDoctor.textContent = 'Hola, ' + user + '!';
-    } else if (userLocalStorage && userLocalStorage === "house") {
+    if (userLocalStorage === "house") {
       var saludoDoctor = document.getElementById('saludo-doctor')
       localStorage.setItem('userLogged', userLocalStorage);
       saludoDoctor.textContent = 'Hola, ' + userLocalStorage + '!';
+    } else if (user === "house") {
+      var saludoDoctor = document.getElementById('saludo-doctor')
+      localStorage.setItem('userLogged', user);
+      saludoDoctor.textContent = 'Hola, ' + user + '!';
     } else {
       window.location.href = "./login.html"
     } 

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("loginForm").addEventListener("submit", function(event) {
       event.preventDefault();  
-      
+      localStorage.clear()
       var username = document.getElementById("username").value;
       var password = document.getElementById("password").value;
      
